@@ -13,7 +13,7 @@ import * as ftp from 'basic-ftp';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 
-// Café24 FTP 인증 정보를 ipo-master .env.local 에서 읽음
+// Café24 FTP 인증 정보를 scheduler .env.local 에서 읽음
 function loadEnv(filePath) {
   try {
     const lines = readFileSync(filePath, 'utf-8').split('\n');
@@ -31,8 +31,8 @@ function loadEnv(filePath) {
   }
 }
 
-loadEnv('C:/github/ipo-master/.env.local');
-loadEnv('C:/github/ipo-master/.env');
+loadEnv('C:/github/scheduler/.env.local');
+loadEnv('C:/github/scheduler/.env');
 
 const HOST = process.env.CAFE24_FTP_HOST;
 const USER = process.env.CAFE24_FTP_USER;
