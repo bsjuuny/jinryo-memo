@@ -37,7 +37,7 @@ loadEnv('C:/github/scheduler/.env');
 const HOST = process.env.CAFE24_FTP_HOST;
 const USER = process.env.CAFE24_FTP_USER;
 const PASS = process.env.CAFE24_FTP_PASS;
-const SERVER_DIR = '/jinryo-memo';
+const SERVER_DIR = 'www/jinryo-memo';
 const LOCAL_DIR = path.join(ROOT, 'out');
 
 if (!HOST || !USER || !PASS) {
