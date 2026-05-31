@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f6faf9;
+  --foreground: #17211f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(108, 181, 177, 0.16), transparent 30rem),
+    linear-gradient(180deg, #f7fbfa 0%, #eef6f4 100%);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-card {
+    box-shadow: none !important;
+    border-color: #cbd5e1 !important;
+  }
+}
