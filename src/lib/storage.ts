@@ -26,7 +26,8 @@ export function loadVisitMemos(): VisitMemo[] {
     if (!raw) return [];
     const parsed = JSON.parse(raw);
     return Array.isArray(parsed) ? parsed.map(migrateMemo) : [];
-  } catch {
+  } catch (error) {
+    console.error("Failed to load visit memos from localStorage (saved memos may be affected):", error);
     return [];
   }
 }
